@@ -1,0 +1,165 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+:root{
+    --black: #000000;
+    --grey:	#1C1C1C;
+    --white: #F2F2F2;
+    --red-100: #F20519;
+    --red-200:#d11222;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--black);
+    color: var(--white);
+    overflow: hidden;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+}
+
+header .menu ul{
+    display: flex;
+    gap: 100px;
+    margin-right: 30px;
+}
+
+header ul li{
+    list-style: none;
+    transition: 0.3s all;
+}
+
+header ul a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+header .menu li:hover{
+    transform: translateY(-4px);
+}
+
+.main-row{
+    display: flex;
+    align-items: center;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 60px;
+    width: 45%;
+    height: 500px;
+}
+
+.content h1{
+    text-transform: uppercase;
+    line-height: 60px;
+    font-size: 1.7em;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.content h1 span{
+    color: var(--red-100);
+    font-size: 3em;
+    font-weight: 800;
+}
+
+.content p {
+    font-size: 0.9em;
+    line-height: 1.8em;
+    margin-bottom: 30px;
+}
+
+.content button{
+    background-color: var(--red-100);
+    color: var(--white);
+    border: none;
+    width: 170px;
+    height: 34px;
+    font-size: 0.8em;
+    border-radius: 20px;
+    text-transform: uppercase;
+    transition: 0.4s all;
+    cursor: pointer;
+}
+
+.content button:hover{
+    background-color: var(--red-200);
+    transform: translateY(-4px);
+}
+
+.imgs-coca img{
+    z-index: 2;
+}
+
+
+.circle{
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    background-color: var(--red-100);
+    border-radius: 50%;
+    bottom: -400px;
+    right: -400px;
+    z-index: 1;
+}
+
+.img1{
+    position: absolute;
+    top: 100px;
+    left: -40px;
+    transform: rotateZ(-20deg);
+}
+
+.img2{
+    position: absolute;
+    bottom: 380px;
+    left: 100px;
+    transform: rotateZ(5deg);
+}
+
+.img3{
+    position: absolute;
+    bottom: 380px;
+    left: 230px;
+    transform: rotateZ(10deg);
+}
+
+.img4{
+    position: absolute;
+    bottom: 380px;
+    left: 370px;
+    transform: rotateZ(-20deg);
+}
+
+.social-media{
+    padding-left: 60px;
+}
+
+.social-media img{
+    background-color: var(--grey);
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 20px;
+    transition: 0.3s all;
+}
+
+.social-media img:hover{
+    transform: translateY(-5px);
+    background-color: var(--red-200);
+}
