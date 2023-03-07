@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <title>Coca-Cola</title>
 </head>
 <body>
@@ -42,5 +43,15 @@
             <a href="#"><img src="assets/img/instagram.png" alt="Twitter icon"></a>
         </div>
     </main>
+    <script>
+        var ultimoScroll;
+        //var dialogPosition = $('body').offset().top;
+        //var dialogHeight = $('body').outerHeight();
+        $(window).on('scroll', function () {
+            var scroll = $(this).scrollTop();
+            if (scroll > 1000 || scroll < 1000) $(window).scrollTop(ultimoScroll);
+            else ultimoScroll = scroll;
+        });
+        </script>
 </body>
 </html>
