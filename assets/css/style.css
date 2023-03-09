@@ -20,7 +20,7 @@ body{
     height: 100vh;
     background-color: var(--black);
     color: var(--white);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 header{
@@ -109,38 +109,41 @@ header .menu li:hover{
     width: 900px;
     height: 900px;
     background-color: var(--red-200);
-    border-radius: 50%;
-    bottom: -400px;
-    right: -400px;
+    clip-path: circle(50% at 50% 100%);
+    bottom: 0;
+    right: -300px;
     z-index: 1;
 }
 
-.img1{
+.img-coca{
     position: absolute;
-    top: 100px;
-    left: -40px;
+    z-index: 2;
+    bottom: -20px;
+}
+
+.img1{
+    right: 500px;
     transform: rotateZ(-20deg);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 86px 100%, 0 403px);
+    shape-outside: circle(50% at 30%);
 }
 
 .img2{
-    position: absolute;
-    bottom: 380px;
-    left: 100px;
+    right: 310px;
     transform: rotateZ(5deg);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 102% 89%, 0 233px);
 }
 
 .img3{
-    position: absolute;
-    bottom: 380px;
-    left: 230px;
+    right: 170px;
     transform: rotateZ(10deg);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 102% 213px, 0 237px);
 }
 
 .img4{
-    position: absolute;
-    bottom: 380px;
-    left: 370px;
+    right: 20px;
     transform: rotateZ(-20deg);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 102% 335px, 0 287px);
 }
 
 .social-media{
@@ -177,32 +180,23 @@ header .menu li:hover{
     .circle{
         width: 700px;
         height: 700px;
-        bottom: -300px;
-        right: -300px;
+        right: -200px;
     }
 
-    .img img{
+    .img-coca{
         width: 100px;
     }
 
     .img1{
-        top: 100px;
-        left: -30px;
+        right: 380px;
     }
     
     .img2{
-        bottom: 300px;
-        left: 100px;
+        right: 240px;
     }
     
     .img3{
-        bottom: 300px;
-        left: 200px;
-    }
-    
-    .img4{
-        bottom: 300px;
-        left: 310px;
+        right: 130px;
     }
 }
 
@@ -219,26 +213,22 @@ header .menu li:hover{
         align-items: start;
     }
 
-    .img{
-        width: 700px;
-        height: 400px;
-    }
-
     .content{
         width: 70%;
         z-index: 100;
     }
 
     .circle{
-        width: 500px;
-        height: 500px;
-        bottom: -600px;
+        width: 600px;
+        height: 600px;
+        bottom: -300px;
         right: -200px;
-        /*clip-path: inset(0px 200px 200px 0px );*/
     }
 
-    .circle img{
-        display: none;
+    .img-coca{
+        bottom: -300px;
     }
+
+    
 
 }
