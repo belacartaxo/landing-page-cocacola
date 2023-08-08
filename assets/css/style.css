@@ -20,7 +20,7 @@ body{
     height: 100vh;
     background-color: var(--black);
     color: var(--white);
-    /* overflow: hidden; */
+    overflow-x: hidden;
 }
 
 header{
@@ -51,9 +51,11 @@ header .menu li:hover{
     transform: translateY(-4px);
 }
 
+
 .main-row{
     display: flex;
     align-items: center;
+    padding-top: 20px;
 }
 
 .content{
@@ -62,7 +64,7 @@ header .menu li:hover{
     justify-content: center;
     padding: 0px 60px;
     width: 45%;
-    height: 500px;
+    height: 100%;
 }
 
 .content h1{
@@ -115,35 +117,43 @@ header .menu li:hover{
     z-index: 1;
 }
 
-.img-coca{
+.box-img-coca{
     position: absolute;
+    bottom: 0px;
+    right: 0px;
+    overflow: hidden;
+    width: 640px;
+}
+
+.img-coca{
+    position: relative;
     z-index: 2;
-    bottom: -20px;
+    bottom: -25px;
 }
 
 .img1{
-    right: 500px;
+    right: -40px;
     transform: rotateZ(-20deg);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 86px 100%, 0 403px);
-    shape-outside: circle(50% at 30%);
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 86px 100%, 0 403px);
+    shape-outside: circle(50% at 30%); */
 }
 
 .img2{
-    right: 310px;
+    right: -80px;
     transform: rotateZ(5deg);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 102% 89%, 0 233px);
+  /*   clip-path: polygon(0 0, 100% 0, 100% 100%, 102% 89%, 0 233px); */
 }
 
 .img3{
-    right: 170px;
+    right: -85px;
     transform: rotateZ(10deg);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 102% 213px, 0 237px);
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 102% 213px, 0 237px); */
 }
 
 .img4{
-    right: 20px;
+    right: -95px;
     transform: rotateZ(-20deg);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 102% 335px, 0 287px);
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 102% 335px, 0 287px); */
 }
 
 .social-media{
