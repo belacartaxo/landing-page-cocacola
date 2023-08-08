@@ -7,6 +7,7 @@
     --white: #F2F2F2;
     --red-100: #F20519;
     --red-200:#d11222;
+    --red-300:#810c15;
 }
 
 *{
@@ -36,19 +37,23 @@ header .menu ul{
     margin-right: 30px;
 }
 
-header ul li{
+header ul li, .navbar ul li{
     list-style: none;
     transition: 0.3s all;
 }
 
-header ul a{
+header ul a, .navbar ul a{
     color: var(--white);
     text-decoration: none;
     font-size: 0.8em;
 }
 
-header .menu li:hover{
+header .menu li:hover, .navbar ul li:hover{
     transform: translateY(-4px);
+}
+
+header .menu-mobile{
+    display: none;
 }
 
 
@@ -134,26 +139,21 @@ header .menu li:hover{
 .img1{
     right: -40px;
     transform: rotateZ(-20deg);
-    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 86px 100%, 0 403px);
-    shape-outside: circle(50% at 30%); */
 }
 
 .img2{
     right: -80px;
     transform: rotateZ(5deg);
-  /*   clip-path: polygon(0 0, 100% 0, 100% 100%, 102% 89%, 0 233px); */
-}
+ }
 
 .img3{
     right: -85px;
     transform: rotateZ(10deg);
-    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 102% 213px, 0 237px); */
 }
 
 .img4{
     right: -95px;
     transform: rotateZ(-20deg);
-    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 102% 335px, 0 287px); */
 }
 
 .social-media{
@@ -198,47 +198,167 @@ header .menu li:hover{
     }
 
     .img1{
-        right: 380px;
+        right: -160px;
     }
     
     .img2{
-        right: 240px;
+        right: -197px;
     }
     
     .img3{
-        right: 130px;
+        right: -200px;
+    }
+    .img4{
+        right: -210px;
     }
 }
 
-@media (max-width: 900px){
-    body{
-        overflow-y: scroll;
+@media (max-width: 950px){
+    header .menu{
+        display: none;
     }
-    header .menu ul{
-        gap: 40px;
+
+    header .menu-mobile{
+        position: fixed;
+        right: 30px;
+        top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .menu-icon{
+        cursor: pointer;
+        width: fit-content;
+        height: 25px;
+        padding: 1px;
+        z-index: 13;
+    }
+    
+    .menu-icon:hover .bar{
+        background-color: var(--red-300);
+        transition: 0.5s;
+    }
+
+    .bar{
+        width: 25px;
+        height: 3px;
+        margin: 4px;
+        background-color: #fff;
+        border-radius: 20px;
+    }
+    
+    .show #bar1{
+        position: relative;
+        top: 6px;
+        transform: rotate(-45deg);
+    }
+
+    .show #bar2 {
+        opacity: 0;
+        transition: 0.2s;
+    }
+
+    .show #bar3{
+        position: relative;
+        top: -8px;
+        transform: rotate(45deg);
+    }
+
+    .menu-circle{
+        background-color: var(--red-100);
+        width: 0px;
+        height: 0px;
+        border-radius: 50%;
+        position: absolute;
+        top: -100px;
+        right: -140px;
+        z-index: 12;
+        transition: 0.3s;
+    }
+
+    .show .menu-circle{
+        width: 300px;
+        height: 300px;
+    }
+
+    .navbar ul{
+        display: none;
+    }
+
+    .show ul{
+        display: block;
+        position: fixed;
+        top: 60px;
+        right: 35px;
+        text-align: right;
+        padding-top: 10px;
+        
+    }
+
+    .show li{
+        font-size: 18px;
     }
 
     .main-row{
         flex-direction: column;
-        align-items: start;
     }
 
     .content{
         width: 70%;
-        z-index: 100;
     }
 
     .circle{
-        width: 600px;
-        height: 600px;
-        bottom: -300px;
+        width: 650px;
+        height: 650px;
+        bottom: -350px;
+        right: -200px;
+    }
+
+    .box-img-coca{
+        width: 700px;
+        bottom: -350px;
         right: -200px;
     }
 
     .img-coca{
-        bottom: -300px;
+        bottom: -20px;
     }
 
+    .img1{
+        right: -40px;
+    }
     
+    .img2{
+        right: -68px;
+    }
+    
+    .img3{
+        right: -70px;
+    }
+
+    .img4{
+        right: -80px;
+    }
+
+    .social-media{
+        display: flex;
+        flex-direction: column;
+        width: 50px;
+        height: 150px;
+        border-radius: 30px;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        bottom: 30px;
+    }
+    
+    .social-media img{
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 650px){
 
 }
